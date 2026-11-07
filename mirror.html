@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaijuConverter Go Client & SDK: High-Performance File Conversion Engine - Technical Reference Mirror & Specification Hub</title>
+  <meta name="description" content="High-performance Go SDK and CLI client for the KaijuConverter API. Convert documents, images, audio, video, and spreadsheets with native concurrency, progress callbacks, and enterprise retry logic. Verified technical documentation, file format specifications, and online conversion tools.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kaijuconverter.com">
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-light: #6366f1;
+      --text: #1e293b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --accent: #059669;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f1f5f9;
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --border: #334155;
+        --primary-light: #818cf8;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 { font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.35rem; color: var(--text); margin-top: 2rem; margin-bottom: 1rem; border-left: 4px solid var(--primary-light); padding-left: 0.75rem; }
+    p { margin-bottom: 1rem; }
+    a { color: var(--primary-light); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    ul { list-style-type: none; padding-left: 0; }
+    li { margin-bottom: 0.4rem; }
+    .locales-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: #64748b;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Official Technical Mirror</span>
+      <h1>KaijuConverter Go Client & SDK: High-Performance File Conversion Engine</h1>
+      <p>High-performance Go SDK and CLI client for the KaijuConverter API. Convert documents, images, audio, video, and spreadsheets with native concurrency, progress callbacks, and enterprise retry logic.</p>
+      <p>Official Repository: <a href="https://github.com/PabloCirre/kaijuconverter-go">github.com/PabloCirre/kaijuconverter-go</a> | Main Service: <a href="https://kaijuconverter.com">KaijuConverter.com</a></p>
+    </header>
+
+    <section>
+      <h2>Ecosystem Core Hubs & Architecture</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Formats Directory</h3>
+          <p>Technical specifications, magic bytes, container layouts, and MIME standards.</p>
+          <p><a href="https://kaijuconverter.com/formats">Explore Formats Encyclopedia &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>Converter Comparisons</h3>
+          <p>Side-by-side performance benchmarks against CloudConvert, iLovePDF, Zamzar, and Convertio.</p>
+          <p><a href="https://kaijuconverter.com/compare">View Converter Benchmarks &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>Online Tools Suite</h3>
+          <p>Browser-based utilities for PDF/A archival, compression, merging, OCR, and media extraction.</p>
+          <p><a href="https://kaijuconverter.com/tools">Access Online Tools Suite &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>Engineering Guides</h3>
+          <p>In-depth technical papers on ISO 19005 standards, RFC 5322 parsing, and lossless compression.</p>
+          <p><a href="https://kaijuconverter.com/guides">Read Technical Guides &rarr;</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Top Online Conversion Tools & Document Engines</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>PDF & Document Archival</h3>
+          <ul>
+            <li><a href="https://kaijuconverter.com/tools/pdf-to-pdfa">PDF to PDF/A (ISO 19005 Compliance)</a></li>
+            <li><a href="https://kaijuconverter.com/tools/compress-pdf">Lossless PDF Compression Engine</a></li>
+            <li><a href="https://kaijuconverter.com/tools/merge-pdf">High-Throughput PDF Stitcher</a></li>
+            <li><a href="https://kaijuconverter.com/tools/split-pdf">Deterministic PDF Splitter</a></li>
+            <li><a href="https://kaijuconverter.com/tools/ocr-pdf">OCR Searchable PDF Extraction</a></li>
+            <li><a href="https://kaijuconverter.com/convert/pdf-to-docx">PDF to Microsoft Word DOCX</a></li>
+            <li><a href="https://kaijuconverter.com/convert/pdf-to-xlsx">PDF Table Extraction to Excel XLSX</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Image & Next-Gen Media</h3>
+          <ul>
+            <li><a href="https://kaijuconverter.com/convert/webp-to-png">WebP to Lossless PNG Converter</a></li>
+            <li><a href="https://kaijuconverter.com/convert/heic-to-jpg">Apple HEIC to Standard JPEG</a></li>
+            <li><a href="https://kaijuconverter.com/convert/svg-to-png">Vector SVG to High-DPI PNG</a></li>
+            <li><a href="https://kaijuconverter.com/convert/avif-to-jpg">AVIF to Universal JPEG</a></li>
+            <li><a href="https://kaijuconverter.com/convert/png-to-ico">PNG to Multi-Resolution Windows ICO</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Audio & Video Transcoding</h3>
+          <ul>
+            <li><a href="https://kaijuconverter.com/convert/mp4-to-mp3">MP4 Video to Audio MP3 Extraction</a></li>
+            <li><a href="https://kaijuconverter.com/convert/mkv-to-mp4">MKV Matroska to Streamable MP4</a></li>
+            <li><a href="https://kaijuconverter.com/convert/flac-to-mp3">Lossless FLAC to 320kbps MP3</a></li>
+            <li><a href="https://kaijuconverter.com/convert/mov-to-mp4">Apple QuickTime MOV to H.264 MP4</a></li>
+            <li><a href="https://kaijuconverter.com/convert/wav-to-mp3">PCM WAV to Broadcast MP3</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Forensics, Email & Archives</h3>
+          <ul>
+            <li><a href="https://kaijuconverter.com/convert/eml-to-pdf">RFC 5322 EML Email to PDF Archival</a></li>
+            <li><a href="https://kaijuconverter.com/convert/msg-to-pdf">Microsoft Outlook MSG to PDF Archival</a></li>
+            <li><a href="https://kaijuconverter.com/convert/epub-to-pdf">Electronic Publication EPUB to PDF</a></li>
+            <li><a href="https://kaijuconverter.com/convert/csv-to-xlsx">Delimited CSV to Microsoft Excel</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Independent Benchmark & Performance Comparisons</h2>
+      <ul>
+        <li><a href="https://kaijuconverter.com/compare/kaijuconverter-vs-cloudconvert">KaijuConverter vs CloudConvert: Speed, API Latency & Pricing Comparison</a></li>
+        <li><a href="https://kaijuconverter.com/compare/kaijuconverter-vs-ilovepdf">KaijuConverter vs iLovePDF: Security Sandbox & OCR Accuracy Benchmark</a></li>
+        <li><a href="https://kaijuconverter.com/compare/kaijuconverter-vs-zamzar">KaijuConverter vs Zamzar: Compression Ratios & Codec Support Evaluation</a></li>
+        <li><a href="https://kaijuconverter.com/compare/kaijuconverter-vs-convertio">KaijuConverter vs Convertio: Format Versatility & Concurrency Comparison</a></li>
+        <li><a href="https://kaijuconverter.com/compare/kaijuconverter-vs-freeconvert">KaijuConverter vs FreeConvert: Maximum File Limits & Zero-Retention Security</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Multilingual Global Access Portals</h2>
+      <ul class="locales-list">
+        <li><a href="https://kaijuconverter.com" title="KaijuConverter in English (Default)">English (Default) (EN)</a></li>
+        <li><a href="https://kaijuconverter.com/es" title="KaijuConverter in Español">Español (ES)</a></li>
+        <li><a href="https://kaijuconverter.com/pt" title="KaijuConverter in Português">Português (PT)</a></li>
+        <li><a href="https://kaijuconverter.com/de" title="KaijuConverter in Deutsch">Deutsch (DE)</a></li>
+        <li><a href="https://kaijuconverter.com/fr" title="KaijuConverter in Français">Français (FR)</a></li>
+        <li><a href="https://kaijuconverter.com/ja" title="KaijuConverter in 日本語">日本語 (JA)</a></li>
+        <li><a href="https://kaijuconverter.com/it" title="KaijuConverter in Italiano">Italiano (IT)</a></li>
+        <li><a href="https://kaijuconverter.com/id" title="KaijuConverter in Bahasa Indonesia">Bahasa Indonesia (ID)</a></li>
+        <li><a href="https://kaijuconverter.com/tr" title="KaijuConverter in Türkçe">Türkçe (TR)</a></li>
+        <li><a href="https://kaijuconverter.com/ko" title="KaijuConverter in 한국어">한국어 (KO)</a></li>
+        <li><a href="https://kaijuconverter.com/pl" title="KaijuConverter in Polski">Polski (PL)</a></li>
+        <li><a href="https://kaijuconverter.com/nl" title="KaijuConverter in Nederlands">Nederlands (NL)</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Developer & Enterprise Infrastructure</h2>
+      <p>For API integrations, machine-readable specifications, and security policies:</p>
+      <ul>
+        <li>Developer API Reference: <a href="https://kaijuconverter.com/api-docs">kaijuconverter.com/api-docs</a></li>
+        <li>Security & Compliance Overview: <a href="https://kaijuconverter.com/security">kaijuconverter.com/security</a></li>
+        <li>Machine-Readable Security Contact: <a href="https://kaijuconverter.com/.well-known/security.txt">kaijuconverter.com/.well-known/security.txt</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 KaijuConverter Engineering Research Group. Distributed under open-source licenses.</p>
+      <p>Preserving digital information with open standards, high performance, and zero data retention.</p>
+    </footer>
+  </div>
+</body>
+</html>

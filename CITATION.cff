@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, academic work, or software projects, please cite it as below."
+title: "KaijuConverter Go Client & SDK: High-Performance File Conversion Engine"
+abstract: "High-performance Go SDK and CLI client for the KaijuConverter API. Convert documents, images, audio, video, and spreadsheets with native concurrency, progress callbacks, and enterprise retry logic."
+type: software
+authors:
+  - family-names: "Cirre"
+    given-names: "Pablo"
+    orcid: "https://orcid.org/0009-0008-4122-3498"
+    website: "https://kaijuconverter.com"
+repository-code: "https://github.com/PabloCirre/kaijuconverter-go"
+url: "https://kaijuconverter.com"
+license: "MIT"
+version: "1.2.0"
+date-released: "2026-11-01"
+keywords:
+  - "golang"
+  - "go-sdk"
+  - "file-converter"
+  - "api-client"
+  - "pdf-conversion"
+  - "image-conversion"
+  - "media-processing"
+  - "kaijuconverter"
