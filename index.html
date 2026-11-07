@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kaijuconverter-go · Official Go Library for KaijuConverter.com</title>
+    <meta name="description" content="Zero-dependency Go module and forensic magic bytes detector for 30+ digital formats. Connects with KaijuConverter.com REST and Model Context Protocol APIs.">
+    <link rel="canonical" href="https://pablocirre.github.io/kaijuconverter-go/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root { --primary: #4f46e5; }
+        header { padding: 3rem 0 1rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 2rem; }
+        .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 9999px; background: #e0e7ff; color: #3730a3; font-weight: 600; font-size: 0.85rem; margin-right: 0.5rem; text-decoration: none; }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .card { padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; background: #fafafa; }
+        pre { background: #1e293b; color: #f8fafc; padding: 1rem; border-radius: 0.5rem; }
+        footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #e2e8f0; text-align: center; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p><a href="https://kaijuconverter.com" target="_blank" class="badge">KaijuConverter.com Ecosystem</a> <span class="badge">Go 1.21+</span> <span class="badge">Zero Dependencies</span></p>
+            <h1>kaijuconverter-go</h1>
+            <p>Official Go client library and zero-dependency magic bytes signature engine for <a href="https://kaijuconverter.com" target="_blank">KaijuConverter.com</a>.</p>
+            <p>
+                <a href="https://pkg.go.dev/github.com/PabloCirre/kaijuconverter-go" target="_blank" role="button">pkg.go.dev Docs</a>
+                <a href="https://github.com/PabloCirre/kaijuconverter-go" target="_blank" role="button" class="secondary">GitHub Repository</a>
+                <a href="https://kaijuconverter.com/tools" target="_blank" role="button" class="contrast">Online Tools</a>
+            </p>
+        </header>
+
+        <section>
+            <h2>Installation</h2>
+            <pre><code>go get -u github.com/PabloCirre/kaijuconverter-go</code></pre>
+        </section>
+
+        <section>
+            <h2>Zero-Dependency Magic Bytes Detection</h2>
+            <p>Detects 30+ file signatures directly from byte slices without third-party dependencies:</p>
+            <pre><code>package main
+
+import (
+    "fmt"
+    "github.com/PabloCirre/kaijuconverter-go"
+)
+
+func main() {
+    header := []byte("%PDF-1.7...")
+    format, ok := kaijuconverter.DetectMagicBytes(header)
+    if ok {
+        fmt.Printf("Detected %s (%s) -> %s\n", format.Extension, format.MIMEType, format.DocURL)
+    }
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Format Hubs & Online Tools</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>File Format Encyclopedia</h3>
+                    <p>Deep technical specifications, byte patterns, RFC standards, and conversion matrices.</p>
+                    <p><a href="https://kaijuconverter.com/formats" target="_blank">Explore Formats &rarr;</a></p>
+                </div>
+                <div class="card">
+                    <h3>High-Performance Tools</h3>
+                    <p>Browser-based and batch conversions: AVIF, WebP, PDF/A, HEIC, FLAC, and Parquet.</p>
+                    <p><a href="https://kaijuconverter.com/tools" target="_blank">Launch Tools &rarr;</a></p>
+                </div>
+                <div class="card">
+                    <h3>Model Context Protocol</h3>
+                    <p>Equip LLM agents and autonomous systems with file transformation skills.</p>
+                    <p><a href="https://kaijuconverter.com/integrations" target="_blank">View MCP Docs &rarr;</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Global Language Hubs</h2>
+            <p>KaijuConverter is localized across 12 native editions:</p>
+            <p>
+                <a href="https://kaijuconverter.com" class="badge">English</a>
+                <a href="https://kaijuconverter.com/es" class="badge">Español</a>
+                <a href="https://kaijuconverter.com/pt" class="badge">Português</a>
+                <a href="https://kaijuconverter.com/de" class="badge">Deutsch</a>
+                <a href="https://kaijuconverter.com/fr" class="badge">Français</a>
+                <a href="https://kaijuconverter.com/ja" class="badge">日本語</a>
+                <a href="https://kaijuconverter.com/it" class="badge">Italiano</a>
+                <a href="https://kaijuconverter.com/id" class="badge">Bahasa Indonesia</a>
+                <a href="https://kaijuconverter.com/tr" class="badge">Türkçe</a>
+                <a href="https://kaijuconverter.com/ko" class="badge">한국어</a>
+                <a href="https://kaijuconverter.com/pl" class="badge">Polski</a>
+                <a href="https://kaijuconverter.com/nl" class="badge">Nederlands</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 <a href="https://kaijuconverter.com">KaijuConverter.com</a> &middot; Open Source under MIT License.</p>
+        </footer>
+    </main>
+</body>
+</html>

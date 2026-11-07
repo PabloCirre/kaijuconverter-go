@@ -1,0 +1,23 @@
+{
+  "name": "kaijuconverter-go-docs",
+  "version": "1.0.0",
+  "description": "Official Go client library and zero-dependency magic bytes signature detector for KaijuConverter.com",
+  "main": "kaiju.go",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloCirre/kaijuconverter-go.git"
+  },
+  "keywords": [
+    "golang",
+    "file-converter",
+    "magic-bytes",
+    "mime-types",
+    "mcp",
+    "pdf",
+    "image-processing",
+    "kaijuconverter"
+  ],
+  "author": "Pablo Cirre",
+  "license": "MIT",
+  "homepage": "https://kaijuconverter.com"
+}
